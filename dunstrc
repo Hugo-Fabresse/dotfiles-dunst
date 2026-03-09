@@ -1,0 +1,68 @@
+[global]
+    font = Maple Mono NF 11
+
+    # Géométrie
+    width = 320
+    height = 100
+    offset = 12x12
+    origin = top-right
+    corner_radius = 8
+
+    # Couleurs
+    background = "#0a0a0a"
+    foreground = "#ffffff"
+    frame_color = "#333333"
+    frame_width = 1
+
+    # Espacement
+    padding = 14
+    horizontal_padding = 14
+    text_icon_padding = 0
+    gap_size = 6
+
+    # Comportement
+    sort = yes
+    indicate_hidden = yes
+    notification_limit = 3
+    show_age_threshold = -1
+
+    # Animations désactivées
+    idle_threshold = 0
+
+    # Pas d'icônes
+    icon_position = off
+
+    # Markup
+    markup = full
+    format = "<b>%s</b>\n%b"
+    alignment = left
+    vertical_alignment = center
+    word_wrap = yes
+    ellipsize = middle
+
+    # Timeout
+    show_indicators = no
+
+    # Pas de son
+    play_action = none
+
+    # Transparence
+    transparency = 0
+
+[urgency_low]
+    background = "#0a0a0a"
+    foreground = "#aaaaaa"
+    frame_color = "#222222"
+    timeout = 3
+
+[urgency_normal]
+    background = "#0a0a0a"
+    foreground = "#ffffff"
+    frame_color = "#333333"
+    timeout = 4
+
+[urgency_critical]
+    background = "#0a0a0a"
+    foreground = "#ff4444"
+    frame_color = "#ff4444"
+    timeout = 0
