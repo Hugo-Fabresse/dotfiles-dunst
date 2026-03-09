@@ -1,68 +1,84 @@
 [global]
+    ### FONT
     font = Maple Mono NF 11
 
-    # Géométrie
-    width = 320
-    height = 100
-    offset = 12x12
+    ### GÉOMÉTRIE
+    width = (400, 400)
+    height = 120
+    offset = (12, 48)
     origin = top-right
-    corner_radius = 8
-
-    # Couleurs
-    background = "#0a0a0a"
-    foreground = "#ffffff"
-    frame_color = "#333333"
-    frame_width = 1
-
-    # Espacement
-    padding = 14
-    horizontal_padding = 14
-    text_icon_padding = 0
+    corner_radius = 6
     gap_size = 6
 
-    # Comportement
-    sort = yes
-    indicate_hidden = yes
-    notification_limit = 3
-    show_age_threshold = -1
+    ### APPARENCE
+    frame_width = 1
+    separator_height = 0
 
-    # Animations désactivées
-    idle_threshold = 0
+    ### PADDING
+    padding = 14
+    horizontal_padding = 16
 
-    # Pas d'icônes
-    icon_position = off
-
-    # Markup
+    ### TEXTE
     markup = full
-    format = "<b>%s</b>\n%b"
+    format = "<span font='Maple Mono NF 9' alpha='50%%'>%a</span>\n<b>%s</b>\n<span alpha='65%%'>%b</span>"
     alignment = left
-    vertical_alignment = center
+    vertical_alignment = top
     word_wrap = yes
-    ellipsize = middle
+    ellipsize = end
+    line_height = 2
 
-    # Timeout
+    ### ICÔNES
+    icon_position = off
+    min_icon_size = 0
+    max_icon_size = 0
+    enable_recursive_icon_lookup = false
+
+    ### COMPORTEMENT
+    sort = urgency_descending
+    indicate_hidden = no
+    notification_limit = 4
+    show_age_threshold = -1
+    stack_duplicates = true
+    hide_duplicate_count = true
     show_indicators = no
+    sticky_history = yes
+    history_length = 20
 
-    # Pas de son
-    play_action = none
+    ### MOUSE
+    mouse_left_click = close_current
+    mouse_middle_click = close_all
+    mouse_right_click = do_action
 
-    # Transparence
-    transparency = 0
+    ### DIVERS
+    follow = none
+    title = Dunst
+    class = Dunst
+    dmenu = wofi --show dmenu
+    browser = google-chrome-stable
 
 [urgency_low]
-    background = "#0a0a0a"
-    foreground = "#aaaaaa"
+    background = "#0d0d0d"
+    foreground = "#bbbbbb"
     frame_color = "#222222"
     timeout = 3
 
 [urgency_normal]
-    background = "#0a0a0a"
-    foreground = "#ffffff"
-    frame_color = "#333333"
-    timeout = 4
+    background = "#0d0d0d"
+    foreground = "#eeeeee"
+    frame_color = "#2a2a2a"
+    timeout = 5
 
 [urgency_critical]
-    background = "#0a0a0a"
-    foreground = "#ff4444"
-    frame_color = "#ff4444"
+    background = "#0d0d0d"
+    foreground = "#ff3333"
+    frame_color = "#3a0000"
     timeout = 0
+
+[Spotify]
+    appname = Spotify
+    background = "#0d0d0d"
+    foreground = "#cccccc"
+    frame_color = "#1a1a1a"
+    format = "<span font='Maple Mono NF 9' alpha='50%%'>spotify</span>\n<b>%s</b>\n<span alpha='65%%'>%b</span>"
+    timeout = 4
+
